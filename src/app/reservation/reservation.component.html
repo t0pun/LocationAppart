@@ -1,53 +1,30 @@
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Maisons à réserver</title>
-</head>
-<body>
-  <section class="logements">
-    <h2>Maisons à réserver</h2>
-    <div class="maison">
-      <img src="https://www.airbnb.fr/static/images/home-collection-6.jpg" alt="Maison 1">
-      <h3>Maison de charme en Provence</h3>
-      <p>Pour 4 personnes</p>
-      <p>Prix à partir de 100€ par nuit</p>
-      <button>Réserver</button>
+ <section class="logements">
+  <div class="grid md:grid-cols-4 gap-4 sm:grid-cols-1">
+      @for (hotel of data; track data){
+      <div class="maison">
+      <div class="image md:h-[15vw] h-[45vh]"><img class="object-cover h-full w-full rounded-[15px]" src="https://images.pexels.com/photos/53464/sheraton-palace-hotel-lobby-architecture-san-francisco-53464.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Maison 1"></div>
+      <div class="hotel_name font-bold">{{hotel["name"]}}</div>
+      <div class="person_number text-[#595959]">Pour {{hotel["nombreCouchagesMin"]}} personnes</div>
+      <div class="price text-[#595959]">{{hotel["prixMax"]}}€ par nuit</div>
     </div>
-    <div class="maison">
-      <img src="https://www.airbnb.fr/static/images/home-collection-7.jpg" alt="Maison 2">
-      <h3>Appartement moderne à Paris</h3>
-      <p>Pour 2 personnes</p>
-      <p>Prix à partir de 80€ par nuit</p>
-      <button>Réserver</button>
-    </div>
-    <div class="maison">
-      <img src="https://www.airbnb.fr/static/images/home-collection-8.jpg" alt="Maison 3">
-      <h3>Chalet en montagne</h3>
-      <p>Pour 6 personnes</p>
-      <p>Prix à partir de 150€ par nuit</p>
-      <button>Réserver</button>
-    </div>
+      }
+  </div>
   </section>
   <style>
+  .image{
+
+    padding-bottom: 2%;
+
+  }
   .logements {
     margin: 20px;
     padding: 20px;
-    border: 1px solid #ddd;
   }
 
   .maison {
     margin-bottom: 20px;
-    padding: 20px;
-    border: 1px solid #ccc;
     display: flex;
     flex-direction: column;
-  }
-
-  .maison img {
-    width: 200px;
-    height: 150px;
   }
 
   .maison h3 {
@@ -66,6 +43,3 @@
     cursor: pointer;
   }
   </style>
-</body>
-</html>
-
