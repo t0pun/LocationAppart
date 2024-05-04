@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hôtel [Nom de l'hôtel] - Réservez votre séjour</title>
+  <link rel="stylesheet" href="hotel.component.css">
+  <script src="hotel.component.js"></script>
+</head>
+<body>
+  <header>
+    <h1 class="titre-chambre">Hotel Paris</h1>
+
+    <div class="image-container">
+      <img src="https://hotel-le-versailles.fr/_novaimg/galleria/1428647.jpg" alt="Image 1">
+    </div>
+  </header>
+
+  <section class="description flex justify-center">
+    <div>
+      <div><p>HOTEL, Occitanie, France</p>
+        <h3>4 voyageurs - 1 chambres - 2 lits - 1 salle de bain </h3></div>
+      
+      <div class="mt-6 text-gray-700 bg-white shadow-md bg-clip-border rounded-xl w-96">
+        <div class="test">
+          <h1>150$ par voyageur</h1>
+          <button id="validez-btn" class="align-middle select-none font-sans font-bold text-center uppercase transition-all disabled:opacity-50 disabled:shadow-none disabled:pointer-events-none text-xs py-3 px-6 rounded-lg bg-gray-900 text-white shadow-md shadow-gray-900/10 hover:shadow-lg hover:shadow-gray-900/20 focus:opacity-[0.85] focus:shadow-none active:opacity-[0.85] active:shadow-none">Validez</button>
+          <p>Hôte: PAPI</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="reservation-section" class="reservation hidden">
+    <h2>Réservez votre séjour</h2>
+    <form action="#">
+      <div class="dates">
+        <label for="arrivee">Date d'arrivée :</label>
+        <input type="date" id="arrivee" name="arrivee" required>
+        <label for="depart">Date de départ :</label>
+        <input type="date" id="depart" name="depart" required>
+      </div>
+    
+      <div class="chambre">
+        <label for="type_chambre">Type de chambre :</label>
+        <select id="type_chambre" name="type_chambre">
+          <option value="simple">Chambre simple</option>
+          <option value="double">Chambre double</option>
+          <option value="suite">Suite</option>
+        </select>
+      </div>
+      <div class="contact">
+        <label for="nom">Nom :</label>
+        <input type="text" id="nom" name="nom" required>
+        <label for="email">Adresse électronique :</label>
+        <input type="email" id="email" name="email" required>
+        <label for="telephone">Numéro de téléphone :</label>
+        <input type="tel" id="telephone" name="telephone">
+      </div>
+      <button type="submit" class="btn">Réserver maintenant</button>
+    </form>
+  </section>
+
+</body>
+</html>
